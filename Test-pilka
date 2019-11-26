@@ -1,0 +1,52 @@
+#include <conio.h>
+const short LICZBA_DRUZYN = 6;
+const short MAX_ZNAKOW = 12;
+//-----------------------------------------
+int main()
+{
+    using namespace std;
+    /*Tworzenie i deklaracja tablic dwuwymiarowej przechowującej nazwy państw w grupie */
+    char tab1[ LICZBA_DRUZYN ][ MAX_ZNAKOW ] = {
+        { 'S', 'l', 'o', 'w', 'a', 'c', 'j', 'a' },
+        { 'I', 'r', 'l', 'a', 'n', 'd', 'i', 'a', ' ', 'P' },
+        { 'C', 'z', 'e', 'c', 'h', 'y' },
+        { 'P', 'o', 'l', 's', 'k', 'a' },
+        { 'S', 'l', 'o', 'w', 'e', 'n', 'i', 'a' },
+        { 'S', 'a', 'n', ' ', 'M', 'a', 'r', '.' },
+    };
+   
+    /*tablica z pkt tab2 i tablica państw tab1, mają wspólne indeksy dla każdego państwa czyli indeks 3 (tab1[3], tab2[3]) - oznacza Polskę, a indeks 0 Słowację */
+    short tab2[ LICZBA_DRUZYN ] = {
+        9, 7, 7, 7, 7, 0 };
+    //tabela zawierajaca lp kompilator określi wielkość
+    short tab3[] = { 1, 2, 3, 4, 5, 6 };
+   
+   
+    //Wyświetlenia danych
+    cout << "Tabela eliminacji mistrzostw swiata 2010"
+    << endl << "Grupa Polska\n\n"
+    << " Lp." << "|" << " Druzyna     " << "|"
+    << " pkt. " << endl
+    << "-------------------------\n"
+    //wyświetlenie I drużyny
+    << " " << tab3[ 0 ] << "  "
+    << "| " << tab1[ 0 ] << "    | " << tab2[ 0 ]
+    //wyświetlenie II drużyny
+    << "\n " << tab3[ 1 ] << "  "
+    << "| " << tab1[ 1 ] << "  | " << tab2[ 1 ]
+    //wyświetlenie III drużyny
+    << "\n " << tab3[ 2 ] << "  "
+    << "| " << tab1[ 2 ] << "      | " << tab2[ 2 ]
+    //wyświetlenie IV drużyny
+    << "\n " << tab3[ 3 ] << "  "
+    << "| " << tab1[ 3 ] << "      | " << tab2[ 3 ]
+    //wyświetlenie V drużyny
+    << "\n " << tab3[ 4 ] << "  "
+    << "| " << tab1[ 4 ] << "    | " << tab2[ 4 ]
+    //wyświetlenie VI drużyny
+    << "\n " << tab3[ 5 ] << "  "
+    << "| " << tab1[ 5 ] << "    | " << tab2[ 5 ];
+   
+    getch();
+    return 0;
+}
